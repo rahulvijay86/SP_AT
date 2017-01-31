@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Sharepoint" parallel="tests" thread-count="4">
+
+    <test verbose="2" name="Windows_7">
+        <parameter name="platform" value="WindowsIE11"/>
+    <parameter name="browserName" value="ie"/>
+    <parameter name="remoteurl" value="http://10.201.168.239:6667/wd/hub"/>
+        <parameter name="url" value="http://portalqa.wiley.com"/>
+        <parameter name="projecturl" value="http://portalqa.wiley.com/sites/projects5/Test_Bx1/default.aspx"/>
+        <parameter name="newsurl" value="http://portalqa.wiley.com/sites/news/default.aspx"/>
+        <parameter name="pageurl" value="http://portalqa.wiley.com/sites/news/Pages/GLOBAL-Apr-5-16-Is-oral-health-linked-to-cognitive-ability.aspx"/>
+        <parameter name="webparturl" value="http://portalqa.wiley.com/Pages/wileycol4test.aspx"/>
+        <parameter name="articleurl" value="http://portal.wiley.com/sites/news/Pages/AUSTRALIA-JUNE-28-16-Jo-Hawthorne-celebrates-30-years-at-Wiley.aspx"/>
+        <parameter name="portalsiteurl" value="http://portalqa.wiley.com/sites/functions/portal"/>
+        <parameter name="siteurl" value="http://portalqa.wiley.com/sites/functions/cmt/SitePages/Home.aspx"/>
+        <parameter name="likeurl" value="http://portalqa.wiley.com/sites/news/Pages/HootSuite's-VPs-Share-Their-Insights.aspx"/>
+        <parameter name="trurl" value="http://portalqa.wiley.com/wileytools/SitePages/Home.aspx"/>
+
+    <classes>
+
+        <class name="intialize.Prerequsite"/>
+
+        <!-- Login/Logout-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_002_Login_Logout_Page"/>
+
+        <!-- HomePage Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_Homepage_Verify_Wiley_Portal"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_Homepage_Verify_Global_Header_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_Homepage_Verify_Home_Page_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_Homepage_Verify_Share_Icon_Tooltip"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_Homepage_Verify_Follow_Icon_Tooltip"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_Homepage_Verify_MyFiles_Icon_Tooltip"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_Homepage_Verify_Search_Dropdown_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_008_Homepage_Navigate_Search_Results"/>
+        <class name="testscripts.Sharepoint.SP_TC_009_Homepage_Verify_Welcome_Text_Msg"/>
+        <class name="testscripts.Sharepoint.SP_TC_010_Homepage_Verify_Searchbox_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_011_Homepage_Verify_Default_Menu_Under_Welcome_Msg"/>
+        <class name="testscripts.Sharepoint.SP_TC_012_Homepage_Verify_Newsfeed_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_013_Homepage_Verify_Display_Of_Articles"/>
+        <class name="testscripts.Sharepoint.SP_TC_014_Homepage_Verify_Copyright_Msg"/>
+
+        <!-- Sub Menu Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_Submenu_Verify_Display_Menu_Under_News"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_Submenu_Click_Menu_Under_News_Option"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_Submenu_Verify_Displayed_Menu_Under_Functions"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_Submenu_Click_Menu_Under_Function_Option"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_Submenu_Verify_Displayed_Menu_Under_Business"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_Submenu_Click_Menu_Under_Business_Option"/>
+        <class name="testscripts.Sharepoint.SP_TC_008_Submenu_Verify_Displayed_Menu_Under_Location"/>
+        <class name="testscripts.Sharepoint.SP_TC_009_Submenu_Click_Menu_Under_Locations_Option"/>
+        <class name="testscripts.Sharepoint.SP_TC_010_Submenu_Verify_Displayed_Menu_Under_Tools"/>
+        <class name="testscripts.Sharepoint.SP_TC_011_Submenu_Click_Menu_Under_Tools_Option"/>
+        <class name="testscripts.Sharepoint.SP_TC_012_Submenu_Verify_Displayed_Menu_Under_Wiley"/>
+        <class name="testscripts.Sharepoint.SP_TC_013_Submenu_Click_Menu_Under_Wiley_Option"/>
+
+        <!-- Project Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_Project_Menu_Verification_Under_Creation_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_Project_Menu_Verification_Under_Project_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_Project_Menu_Verification_Under_Create_New_Project_Page"/>
+        <!--<class name="testscripts.Sharepoint.SP_TC_004_005_008_009_Project_Creation_Of_New_Project"/>-->
+        <class name="testscripts.Sharepoint.SP_TC_006_Project_Verification_Of_Warning_Date_Msg"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_Project_Login_With_New_Project_URL"/>
+        <!--<class name="testscripts.Sharepoint.SP_TC_010_011_Project_Edit_Link_Menu"/>-->
+        <!--<class name="testscripts.Sharepoint.SP_TC_012_Project_Drag_And_Drop_Menu"/>-->
+        <!-- Dev Team wants to stop this as it creates top level menu-->
+        <!--<class name="testscripts.Sharepoint.SP_TC_013_Project_Create_New_Link_Menu"/>-->
+        <class name="testscripts.Sharepoint.SP_TC_014_Project_Verification_Of_Widgets"/>
+        <class name="testscripts.Sharepoint.SP_TC_015_Project_Verification_Of_Newsfeed_Section"/>
+        <class name="testscripts.Sharepoint.SP_TC_016_Project_Verification_Of_Page_Section_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_017_Project_Verification_Of_Menu_Under_Page_Option"/>
+        <class name="testscripts.Sharepoint.SP_TC_018_Project_Verification_Of_Menu_Under_Files_Option"/>
+
+        <!-- Groups Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_Groups_Login_To_Groups_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_007_Submenu_Groups_Verification_Of_Header_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_Groups_Accessing_Discussed_Topics_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_Groups_Verification_Of_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_Groups_Verification_Of_Wiley_Logo"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_Groups_Click_Home_Link"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_Groups_Verify_Menu_Under_Category"/>
+        <class name="testscripts.Sharepoint.SP_TC_008_Groups_Click_AtoZ_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_009_Groups_Click_ZtoA_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_010_Groups_Click_Whats_Hot_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_011_Groups_Verify_Recent_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_012_Groups_Verify_Members_Page_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_013_Groups_Verify_Top_Members_Page_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_014_Groups_Verify_New_Members_Page_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_015_Groups_Click_About_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_016_Groups_Click_Site_Contents_And_Verify_Listed_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_017_Groups_Verify_Menu_Under_Site_Content"/>
+        <class name="testscripts.Sharepoint.SP_TC_018_Group_Follow_Group_And_Start_Conversation"/>
+        <class name="testscripts.Sharepoint.SP_TC_019_Group_Verify_New_Workflow_Menu"/>
+
+        <!-- Search Box Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_SearchBox_Verify_Searchbox_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_SearchBox_Verify_Search_Functionality"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_SearchBox_Verify_SearchBox_Presence_AcrossPages"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_SearchBox_Verify_Search_Functionality_Across_AllPages"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_SearchBox_Verify_Search_Dropdown_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_SearchBox_Verify_DW_SearchBox"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_SearchBox_Verify_ClickFor_MoreResults"/>
+
+        <!-- Search Result Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_SearchResult_Verify_Phone"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_SearchResult_Verify_RSS_Feed_Link"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_SearchResult_Verify_Alert_Link"/>
+
+        <!-- Username Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_UsernamePage_Verify_User_Dropdown_Options"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_UsernamePage_Click_AboutMe_Link"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_UsernamePage_Verify_Profile_Picture"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_UsernamePage_Profile_Page_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_UsernamePage_Verify_Edit_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_UsernamePage_Navigating_Edit_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_UsernamePage_Verify_Edit_Menu_Options"/>
+        <class name="testscripts.Sharepoint.SP_TC_008_UsernamePage_Verify_FlyOver_Menu_Edit_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_009_UsernamePage_EditUserDetails_Click_SaveAndClose"/>
+        <class name="testscripts.Sharepoint.SP_TC_010_UsernamePage_Verify_SaveAndClose_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_011_UsernamePage_EditUserDetails_Click_CancelAndGoBack"/>
+        <class name="testscripts.Sharepoint.SP_TC_012_UsernamePage_Verify_Custom_Properties_Settings"/>
+        <class name="testscripts.Sharepoint.SP_TC_013_UsernamePage_Verify_NewsFeed_Settings"/>
+        <class name="testscripts.Sharepoint.SP_TC_014_UsernamePage_Verify_Language_And_Region"/>
+        <class name="testscripts.Sharepoint.SP_TC_015_UsernamePage_Verify_Tags_FollowedBy_User"/>
+        <class name="testscripts.Sharepoint.SP_TC_016_UsernamePage_Org_Chart_Menu"/>
+        <!--<class name="testscripts.Sharepoint.SP_TC_017_UsernamePage_See_More_SilverLight_View"/>-->
+        <!--<class name="testscripts.Sharepoint.SP_TC_018_UsernamePage_See_More_HTML_View"/>-->
+
+        <!-- Common-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_WileyFooter_Verify_Wiley_Footer"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_WileyLogo_Verify_Wiley_Portal_Logo"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_Copyright_Verify_Copyright_Msg"/>
+        <class name="testscripts.Sharepoint.SP_TC_001_SitesFollowed_Verify_User_Following_Sites"/>
+        <class name="testscripts.Sharepoint.SP_TC_001_DocumentsFollowed_Verify_User_Following_Documents"/>
+        <class name="testscripts.Sharepoint.SP_TC_001_Browse_Verify_Browse_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_001_PageMenu_Verify_Page_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_001_MySite_Comparison"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_Common_New_Page_Check_Option"/>
+
+        <!-- Add Page Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_AddPage_Adding_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_003_004_005_AddPage_Verify_Options"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_AddPage_CheckIn_Checkout_Option"/>
+
+        <!-- My Site Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_002_MySite_Upload_Picture"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_MySite_Edit_Link_Menu"/>
+
+        <!-- News Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_News_Click_News_Page_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_News_Verify_Menu_Under_News_Option"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_News_Click_Menu_Under_News_Option"/>
+
+        <!-- Branding Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_Branding_Verify_Wiley_Portal"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_Branding_Verify_Global_Header_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_Branding_Verify_Home_Page_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_Branding_Verify_Share_Icon_Tooltip"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_Branding_Verify_Follow_Icon_Tooltip"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_Branding_Verify_MyFiles_Icon_Tooltip"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_Branding_Verify_Search_Dropdown_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_008_Branding_Navigate_Search_Results"/>
+        <class name="testscripts.Sharepoint.SP_TC_009_Branding_Verify_Welcome_Text_Msg"/>
+        <class name="testscripts.Sharepoint.SP_TC_010_Branding_Verify_Searchbox_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_011_Branding_Verify_Default_Menu_Under_Welcome_Msg"/>
+        <class name="testscripts.Sharepoint.SP_TC_012_Branding_Verify_Newsfeed_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_013_Branding_Verify_Display_Of_Articles"/>
+        <class name="testscripts.Sharepoint.SP_TC_014_Branding_Verify_Copyright_Msg"/>
+        <class name="testscripts.Sharepoint.SP_TC_015_Branding_Verify_Newsfeed_Page_And_Upload_Photo"/>
+        <class name="testscripts.Sharepoint.SP_TC_016_Branding_Verify_User_Tag_Option"/>
+        <class name="testscripts.Sharepoint.SP_TC_017_Branding_Verify_User_Dropdown_Options"/>
+        <class name="testscripts.Sharepoint.SP_TC_018_Branding_Click_AboutMe_Link"/>
+        <class name="testscripts.Sharepoint.SP_TC_019_Branding_Verify_Profile_Picture"/>
+        <class name="testscripts.Sharepoint.SP_TC_020_Branding_Verify_Phone_Menu"/>
+        <class name="testscripts.Sharepoint.SP_TC_021_Branding_Verify_RSS_Feed_Link"/>
+        <class name="testscripts.Sharepoint.SP_TC_022_Branding_Click_Alert_Link"/>
+        <class name="testscripts.Sharepoint.SP_TC_023_Branding_Verify_Alert_Link"/>
+
+        <!-- Newsfeed Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_NewsFeed_Post_Comments"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_NewsFeed_Use_Of_Tag"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_NewsFeed_Follow_Of_Tag"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_NewsFeed_Post_To_Everyone"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_NewsFeed_Verify_Like_Unlike_Follow"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_NewsFeed_Upload_Picture"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_NewsFeed_Post_To_Individual"/>
+
+        <!-- Blog Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_Blog_CreateBlog"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_Blog_Edit_Categories"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_Blog_Create_Post_In_Blog"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_Blog_Add_Comments_To_Blog"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_Blog_Manage_Comments_In_Blog"/>
+        <class name="testscripts.Sharepoint.SP_TC_006_Blog_Verify_Default_Categories"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_Blog_Verify_Change_Post_Layout_Options"/>
+        <class name="testscripts.Sharepoint.SP_TC_008_Blog_Browse_And_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_009_Blog_Verify_Email_Link"/>
+        <class name="testscripts.Sharepoint.SP_TC_010_Blog_Manage_Alert"/>
+        <class name="testscripts.Sharepoint.SP_TC_011_Blog_Verify_Edit_Page_Options"/>
+
+
+        <!-- Docs Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_DocsPage_Create_Document"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_DocsPage_Upload_Document"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_DocsPage_Create_New_Folder"/>
+        <class name="testscripts.Sharepoint.SP_TC_004_DocsPage_Edit_Existing_Document"/>
+        <class name="testscripts.Sharepoint.SP_TC_005_006_DocsPage_CheckOut_And_CheckIn_Document"/>
+        <class name="testscripts.Sharepoint.SP_TC_007_DocsPage_View_And_Edit_Properties"/>
+        <class name="testscripts.Sharepoint.SP_TC_008_DocsPage_Verify_Library_Link"/>
+        <class name="testscripts.Sharepoint.SP_TC_009_DocsPage_Verify_Files_Options"/>
+        <class name="testscripts.Sharepoint.SP_TC_010_DocsPage_Create_And_Modify_View"/>
+        <class name="testscripts.Sharepoint.SP_TC_011_DocsPage_Verify_CheckBoxes"/>
+
+        <!-- Libs Module-->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_Libs_Verify_Library_Tab_Menu_Options"/>
+
+        <!--Wiki Module -->
+
+        <class name="testscripts.Sharepoint.SP_TC_001_Wiki_Create_Wiki_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_002_Wiki_Edit_Existing_Page"/>
+        <class name="testscripts.Sharepoint.SP_TC_003_Wiki_Verify_Wiki_Publish"/>
+
+        <!--SPU-287 Module-->
+
+        <class name="testscripts.Sharepoint.SPU_287_TC_004_005_Add_Delete_Category_Under_TAndR"/>
+        <class name="testscripts.Sharepoint.SPU_287_TC_004_005_WileyToolsAndResources_Add_Delete_Category"/>
+        <class name="testscripts.Sharepoint.SPU_287_TC_006_Click_On_TAndRFavs"/>
+
+        <!--SPU-260-Module-->
+
+        <class name="testscripts.Sharepoint.SPU_260_TC_001_Verify_CopyRightMessage_OnMasterPage"/>
+        <class name="testscripts.Sharepoint.SPU_260_TC_002_Verify_CopyRightMsg_AcrossPages"/>
+
+        <!--SPU-255-Module-->
+
+        <class name="testscripts.Sharepoint.SPU_255_TC_001_002_Verify_PostCross_And_Delete_Post"/>
+        <class name="testscripts.Sharepoint.SPU_255_TC_003_Post_Retained_OnClicking_Cancel_Delete"/>
+
+        <!--SPU-291-Module-->
+
+        <class name="testscripts.Sharepoint.SPU_291_TC_019_Verify_Like_Button_Functionality"/>
+        <class name="testscripts.Sharepoint.SPU_291_TC_020_Verify_Like_And_Unlike"/>
+        <class name="testscripts.Sharepoint.SPU_291_TC_021_Verify_Like_Button_And_Count"/>
+
+        <!-- SPU-292-Module-->
+
+        <class name="testscripts.Sharepoint.SPU_292_TC_023_024_025_Verify_Promote_Button"/>
+
+        <!--SPU-293-Module-->
+
+        <class name="testscripts.Sharepoint.SPU_293_TC_013_Verify_AbsenceOfMenus_HomePage"/>
+        <class name="testscripts.Sharepoint.SPU_293_TC_014_Verify_AbsenceOfMenus_TAndR_Page"/>
+        <class name="testscripts.Sharepoint.SPU_293_TC_015_Verify_AbsenceOfMenus_Business_KandL_Page"/>
+
+        <!--SPU-289-Module-->
+
+        <class name="testscripts.Sharepoint.SPU_289_TC_016_Verify_Tools_In_HomePage"/>
+        <class name="testscripts.Sharepoint.SPU_289_TC_017_Verify_TAndR_Data_Match"/>
+        <class name="testscripts.Sharepoint.SPU_289_TC_018_Verify_TAndR_Data_And_WebPart"/>
+
+
+        <!-- SPU-270:  Automating Project Site Expiration-->
+
+        <!--<class name="testscripts.Sharepoint.SPU_270_TC_001_002_Creation_Of_New_Project"/>-->
+        <class name="testscripts.Sharepoint.SPU_270_TC_002A_Verification_Of_Expiry_Date_Msg"/>
+        <class name="testscripts.Sharepoint.SPU_270_TC_003_Login_With_New_Project_URL"/>
+
+        <!--<class name="testscripts.Sharepoint.SPU_245_TC_001_002_003_004_Create_Webpart_And_Verify_Height_Options"/>-->
+        <!--<class name="testscripts.Sharepoint.SPU_245_TC_005_006_007_008_Create_Wiley_Content_Webpart_And_Verify_Height_Options"/>-->
+        <!--<class name="testscripts.Sharepoint.SPU_245_TC_009_010_011_012_Create_Wiley_Tile_Content_Webpart_And_Verify_Height_Options"/>-->
+        <!--<class name="testscripts.Sharepoint.SPU_245_TC_013_014_015_016_Create_Wiley_Split_Text_Content_Webpart_And_Verify_Height_Options"/>-->
+
+        <!--Defect Test Case and it's removed from the 205 Test Scripts count-->
+        <!--<class name="testscripts.Sharepoint.SPU_302_TC_001_Verify_Disaster_Recovery_Page"/>-->
+        <class name="testscripts.Sharepoint.SPU_311_TC_005_Add_And_Verify_Tags"/>
+
+        <class name="testscripts.Sharepoint.SPU_293_TC_013_AboutWiley_Verify_AbsenceOfMenus_HomePage"/>
+        <class name="testscripts.Sharepoint.SPU_293_TC_014_AboutWiley_Verify_AbsenceOfMenus_ToolsAndResourcesPage"/>
+        <class name="testscripts.Sharepoint.SPU_293_TC_015_AboutWiley_Verify_AbsenceOfMenus_Business_KandL_Page"/>
+
+
+
+        <class name="testscripts.Sharepoint.SPU_255_TC_003_DeletePostCross_Verify_Post_Retained_OnClicking_Cancel_Delete"/>
+        <class name="testscripts.Sharepoint.SPU_255_TC_001_002_DeletePostCross_Verify_PresenceOf_PostCross_And_Delete_Post"/>
+        <class name="testscripts.Sharepoint.SPU_316_TC_013_014_Verify_Phone_And_Email"/>
+        <class name="testscripts.Sharepoint.SPU_311_TC_008_009_010_Create_Test_Page"/>
+        <class name="testscripts.Sharepoint.SPU_311_TC_007_Unfollow_One_Subsection"/>
+        <!--<class name="testscripts.Sharepoint.SPU_291_TC_022_Verify_Article_With_ZeroLikes"/>-->
+        <class name="testscripts.Sharepoint.SPU_288_TC_007_Add_Category_Under_TAndR_Verify_TandR"/>
+        <class name="testscripts.Sharepoint.SPU_288_TC_008_Edit_List_Under_TAndR"/>
+        <class name="testscripts.Sharepoint.SPU_288_TC_009_Click_On_TAndRFavs_AfterCloud"/>
+        <class name="testscripts.Sharepoint.SPU_286_TC_026_027_028_Verify_User_Able_To_Post"/>
+        <class name="testscripts.Sharepoint.SPU_276_TC_003_Verify_Docs_SearchResults"/>
+        <class name="testscripts.Sharepoint.SPU_276_TC_002_Verify_Doc_SearchResults"/>
+        <class name="testscripts.Sharepoint.SPU_276_TC_001_Verify_PPT_SearchResults"/>
+        <class name="testscripts.Sharepoint.SPU_269_TC_001_Verify_LikeButton_Functionality"/>
+        <class name="testscripts.Sharepoint.SPU_249_TC_001_002_Promote_And_RePromote_OtherUsers_Post"/>
+        <class name="testscripts.Sharepoint.SPU_249_TC_003_Promote_Own_Post"/>
+        <class name="testscripts.Sharepoint.SPU_249_TC_004_005_Promote_And_RePromote_Post_AllWiley"/>
+
+    </classes>
+</test>
+
+    <test verbose="2" name="Windows_7FF">
+        <parameter name="platform" value="WindowsFF"/>
+        <parameter name="browserName" value="firefox"/>
+        <parameter name="remoteurl" value="http://10.201.64.25:5555/wd/hub"/>
+        <parameter name="url" value="http://portalqa.wiley.com"/>
+        <parameter name="projecturl" value="http://portalqa.wiley.com/sites/projects5/Test_Bx1/default.aspx"/>
+        <parameter name="newsurl" value="http://portalqa.wiley.com/sites/news/default.aspx"/>
+        <parameter name="pageurl" value="http://portalqa.wiley.com/sites/news/Pages/GLOBAL-Apr-5-16-Is-oral-health-linked-to-cognitive-ability.aspx"/>
+        <parameter name="webparturl" value="http://portalqa.wiley.com/Pages/wileycol4test.aspx"/>
+        <parameter name="articleurl" value="http://portal.wiley.com/sites/news/Pages/AUSTRALIA-JUNE-28-16-Jo-Hawthorne-celebrates-30-years-at-Wiley.aspx"/>
+        <parameter name="portalsiteurl" value="http://portalqa.wiley.com/sites/functions/portal"/>
+        <parameter name="siteurl" value="http://portalqa.wiley.com/sites/functions/cmt/SitePages/Home.aspx"/>
+        <parameter name="likeurl" value="http://portalqa.wiley.com/sites/news/Pages/HootSuite's-VPs-Share-Their-Insights.aspx"/>
+        <parameter name="trurl" value="http://portalqa.wiley.com/wileytools/SitePages/Home.aspx"/>
+
+        <classes>
+
+            <!--<class name="intialize.Prerequsite"/>-->
+
+            <!-- Login/Logout-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_002_Login_Logout_Page"/>
+
+            <!-- HomePage Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Homepage_Verify_Wiley_Portal"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Homepage_Verify_Global_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Homepage_Verify_Home_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Homepage_Verify_Share_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Homepage_Verify_Follow_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Homepage_Verify_MyFiles_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Homepage_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Homepage_Navigate_Search_Results"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Homepage_Verify_Welcome_Text_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Homepage_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Homepage_Verify_Default_Menu_Under_Welcome_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Homepage_Verify_Newsfeed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Homepage_Verify_Display_Of_Articles"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Homepage_Verify_Copyright_Msg"/>
+
+            <!-- Sub Menu Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Submenu_Verify_Display_Menu_Under_News"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Submenu_Click_Menu_Under_News_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Submenu_Verify_Displayed_Menu_Under_Functions"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Submenu_Click_Menu_Under_Function_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Submenu_Verify_Displayed_Menu_Under_Business"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Submenu_Click_Menu_Under_Business_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Submenu_Verify_Displayed_Menu_Under_Location"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Submenu_Click_Menu_Under_Locations_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Submenu_Verify_Displayed_Menu_Under_Tools"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Submenu_Click_Menu_Under_Tools_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Submenu_Verify_Displayed_Menu_Under_Wiley"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Submenu_Click_Menu_Under_Wiley_Option"/>
+
+            <!-- Project Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Project_Menu_Verification_Under_Creation_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Project_Menu_Verification_Under_Project_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Project_Menu_Verification_Under_Create_New_Project_Page"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_004_005_008_009_Project_Creation_Of_New_Project"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_006_Project_Verification_Of_Warning_Date_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Project_Login_With_New_Project_URL"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_010_011_Project_Edit_Link_Menu"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_012_Project_Drag_And_Drop_Menu"/>-->
+            <!-- Dev Team wants to stop this as it creates top level menu-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_013_Project_Create_New_Link_Menu"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_014_Project_Verification_Of_Widgets"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_Project_Verification_Of_Newsfeed_Section"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_Project_Verification_Of_Page_Section_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Project_Verification_Of_Menu_Under_Page_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Project_Verification_Of_Menu_Under_Files_Option"/>
+
+            <!-- Groups Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Groups_Login_To_Groups_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_007_Submenu_Groups_Verification_Of_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Groups_Accessing_Discussed_Topics_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Groups_Verification_Of_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Groups_Verification_Of_Wiley_Logo"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Groups_Click_Home_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Groups_Verify_Menu_Under_Category"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Groups_Click_AtoZ_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Groups_Click_ZtoA_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Groups_Click_Whats_Hot_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Groups_Verify_Recent_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Groups_Verify_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Groups_Verify_Top_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Groups_Verify_New_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_Groups_Click_About_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_Groups_Click_Site_Contents_And_Verify_Listed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Groups_Verify_Menu_Under_Site_Content"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Group_Follow_Group_And_Start_Conversation"/>
+            <class name="testscripts.Sharepoint.SP_TC_019_Group_Verify_New_Workflow_Menu"/>
+
+            <!-- Search Box Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_SearchBox_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_SearchBox_Verify_Search_Functionality"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_SearchBox_Verify_SearchBox_Presence_AcrossPages"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_SearchBox_Verify_Search_Functionality_Across_AllPages"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_SearchBox_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_SearchBox_Verify_DW_SearchBox"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_SearchBox_Verify_ClickFor_MoreResults"/>
+
+            <!-- Search Result Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_SearchResult_Verify_Phone"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_SearchResult_Verify_RSS_Feed_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_SearchResult_Verify_Alert_Link"/>
+
+            <!-- Username Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_UsernamePage_Verify_User_Dropdown_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_UsernamePage_Click_AboutMe_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_UsernamePage_Verify_Profile_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_UsernamePage_Profile_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_UsernamePage_Verify_Edit_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_UsernamePage_Navigating_Edit_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_UsernamePage_Verify_Edit_Menu_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_UsernamePage_Verify_FlyOver_Menu_Edit_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_UsernamePage_EditUserDetails_Click_SaveAndClose"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_UsernamePage_Verify_SaveAndClose_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_UsernamePage_EditUserDetails_Click_CancelAndGoBack"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_UsernamePage_Verify_Custom_Properties_Settings"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_UsernamePage_Verify_NewsFeed_Settings"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_UsernamePage_Verify_Language_And_Region"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_UsernamePage_Verify_Tags_FollowedBy_User"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_UsernamePage_Org_Chart_Menu"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_017_UsernamePage_See_More_SilverLight_View"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_018_UsernamePage_See_More_HTML_View"/>-->
+
+            <!-- Common-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_WileyFooter_Verify_Wiley_Footer"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_WileyLogo_Verify_Wiley_Portal_Logo"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Copyright_Verify_Copyright_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_SitesFollowed_Verify_User_Following_Sites"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_DocumentsFollowed_Verify_User_Following_Documents"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_Browse_Verify_Browse_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_PageMenu_Verify_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_MySite_Comparison"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Common_New_Page_Check_Option"/>
+
+            <!-- Add Page Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_AddPage_Adding_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_003_004_005_AddPage_Verify_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_AddPage_CheckIn_Checkout_Option"/>
+
+            <!-- My Site Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_002_MySite_Upload_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_MySite_Edit_Link_Menu"/>
+
+            <!-- News Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_News_Click_News_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_News_Verify_Menu_Under_News_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_News_Click_Menu_Under_News_Option"/>
+
+            <!-- Branding Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Branding_Verify_Wiley_Portal"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Branding_Verify_Global_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Branding_Verify_Home_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Branding_Verify_Share_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Branding_Verify_Follow_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Branding_Verify_MyFiles_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Branding_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Branding_Navigate_Search_Results"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Branding_Verify_Welcome_Text_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Branding_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Branding_Verify_Default_Menu_Under_Welcome_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Branding_Verify_Newsfeed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Branding_Verify_Display_Of_Articles"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Branding_Verify_Copyright_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_Branding_Verify_Newsfeed_Page_And_Upload_Photo"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_Branding_Verify_User_Tag_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Branding_Verify_User_Dropdown_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Branding_Click_AboutMe_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_019_Branding_Verify_Profile_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_020_Branding_Verify_Phone_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_021_Branding_Verify_RSS_Feed_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_022_Branding_Click_Alert_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_023_Branding_Verify_Alert_Link"/>
+
+            <!-- Newsfeed Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_NewsFeed_Post_Comments"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_NewsFeed_Use_Of_Tag"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_NewsFeed_Follow_Of_Tag"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_NewsFeed_Post_To_Everyone"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_NewsFeed_Verify_Like_Unlike_Follow"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_NewsFeed_Upload_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_NewsFeed_Post_To_Individual"/>
+
+            <!-- Blog Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Blog_CreateBlog"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Blog_Edit_Categories"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Blog_Create_Post_In_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Blog_Add_Comments_To_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Blog_Manage_Comments_In_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Blog_Verify_Default_Categories"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Blog_Verify_Change_Post_Layout_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Blog_Browse_And_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Blog_Verify_Email_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Blog_Manage_Alert"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Blog_Verify_Edit_Page_Options"/>
+
+
+            <!-- Docs Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_DocsPage_Create_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_DocsPage_Upload_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_DocsPage_Create_New_Folder"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_DocsPage_Edit_Existing_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_006_DocsPage_CheckOut_And_CheckIn_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_DocsPage_View_And_Edit_Properties"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_DocsPage_Verify_Library_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_DocsPage_Verify_Files_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_DocsPage_Create_And_Modify_View"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_DocsPage_Verify_CheckBoxes"/>
+
+            <!-- Libs Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Libs_Verify_Library_Tab_Menu_Options"/>
+
+            <!--Wiki Module -->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Wiki_Create_Wiki_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Wiki_Edit_Existing_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Wiki_Verify_Wiki_Publish"/>
+
+            <!--SPU-287 Module-->
+
+            <class name="testscripts.Sharepoint.SPU_287_TC_004_005_Add_Delete_Category_Under_TAndR"/>
+            <class name="testscripts.Sharepoint.SPU_287_TC_004_005_WileyToolsAndResources_Add_Delete_Category"/>
+            <class name="testscripts.Sharepoint.SPU_287_TC_006_Click_On_TAndRFavs"/>
+
+            <!--SPU-260-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_260_TC_001_Verify_CopyRightMessage_OnMasterPage"/>
+            <class name="testscripts.Sharepoint.SPU_260_TC_002_Verify_CopyRightMsg_AcrossPages"/>
+
+            <!--SPU-255-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_255_TC_001_002_Verify_PostCross_And_Delete_Post"/>
+            <class name="testscripts.Sharepoint.SPU_255_TC_003_Post_Retained_OnClicking_Cancel_Delete"/>
+
+
+            <!--SPU-291-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_291_TC_019_Verify_Like_Button_Functionality"/>
+            <class name="testscripts.Sharepoint.SPU_291_TC_020_Verify_Like_And_Unlike"/>
+            <class name="testscripts.Sharepoint.SPU_291_TC_021_Verify_Like_Button_And_Count"/>
+
+            <!-- SPU-292-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_292_TC_023_024_025_Verify_Promote_Button"/>
+
+            <!--SPU-293-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_293_TC_013_Verify_AbsenceOfMenus_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_014_Verify_AbsenceOfMenus_TAndR_Page"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_015_Verify_AbsenceOfMenus_Business_KandL_Page"/>
+
+            <!--SPU-289-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_289_TC_016_Verify_Tools_In_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_289_TC_017_Verify_TAndR_Data_Match"/>
+            <class name="testscripts.Sharepoint.SPU_289_TC_018_Verify_TAndR_Data_And_WebPart"/>
+
+
+            <!-- SPU-270:  Automating Project Site Expiration-->
+
+            <!--<class name="testscripts.Sharepoint.SPU_270_TC_001_002_Creation_Of_New_Project"/>-->
+            <class name="testscripts.Sharepoint.SPU_270_TC_002A_Verification_Of_Expiry_Date_Msg"/>
+            <class name="testscripts.Sharepoint.SPU_270_TC_003_Login_With_New_Project_URL"/>
+
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_001_002_003_004_Create_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_005_006_007_008_Create_Wiley_Content_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_009_010_011_012_Create_Wiley_Tile_Content_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_013_014_015_016_Create_Wiley_Split_Text_Content_Webpart_And_Verify_Height_Options"/>-->
+
+            <!--Defect Test Case and it's removed from the 205 Test Scripts count-->
+            <!--<class name="testscripts.Sharepoint.SPU_302_TC_001_Verify_Disaster_Recovery_Page"/>-->
+            <class name="testscripts.Sharepoint.SPU_311_TC_005_Add_And_Verify_Tags"/>
+
+            <class name="testscripts.Sharepoint.SPU_293_TC_013_AboutWiley_Verify_AbsenceOfMenus_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_014_AboutWiley_Verify_AbsenceOfMenus_ToolsAndResourcesPage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_015_AboutWiley_Verify_AbsenceOfMenus_Business_KandL_Page"/>
+
+            <class name="testscripts.Sharepoint.SPU_255_TC_003_DeletePostCross_Verify_Post_Retained_OnClicking_Cancel_Delete"/>
+            <class name="testscripts.Sharepoint.SPU_255_TC_001_002_DeletePostCross_Verify_PresenceOf_PostCross_And_Delete_Post"/>
+            <class name="testscripts.Sharepoint.SPU_316_TC_013_014_Verify_Phone_And_Email"/>
+            <class name="testscripts.Sharepoint.SPU_311_TC_008_009_010_Create_Test_Page"/>
+            <class name="testscripts.Sharepoint.SPU_311_TC_007_Unfollow_One_Subsection"/>
+            <!--<class name="testscripts.Sharepoint.SPU_291_TC_022_Verify_Article_With_ZeroLikes"/>-->
+            <class name="testscripts.Sharepoint.SPU_288_TC_007_Add_Category_Under_TAndR_Verify_TandR"/>
+            <class name="testscripts.Sharepoint.SPU_288_TC_008_Edit_List_Under_TAndR"/>
+            <class name="testscripts.Sharepoint.SPU_288_TC_009_Click_On_TAndRFavs_AfterCloud"/>
+            <class name="testscripts.Sharepoint.SPU_286_TC_026_027_028_Verify_User_Able_To_Post"/>
+            <class name="testscripts.Sharepoint.SPU_276_TC_003_Verify_Docs_SearchResults"/>
+            <class name="testscripts.Sharepoint.SPU_276_TC_002_Verify_Doc_SearchResults"/>
+            <class name="testscripts.Sharepoint.SPU_276_TC_001_Verify_PPT_SearchResults"/>
+            <class name="testscripts.Sharepoint.SPU_269_TC_001_Verify_LikeButton_Functionality"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_001_002_Promote_And_RePromote_OtherUsers_Post"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_003_Promote_Own_Post"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_004_005_Promote_And_RePromote_Post_AllWiley"/>
+
+        </classes>
+    </test>
+
+    <test verbose="2" name="Windows_7IE">
+        <parameter name="platform" value="WindowsIE10"/>
+        <parameter name="browserName" value="ie"/>
+        <parameter name="remoteurl" value="http://10.201.168.238:6666/wd/hub"/>
+        <parameter name="url" value="http://portalqa.wiley.com"/>
+        <parameter name="projecturl" value="http://portalqa.wiley.com/sites/projects5/Test_Bx1/default.aspx"/>
+        <parameter name="newsurl" value="http://portalqa.wiley.com/sites/news/default.aspx"/>
+        <parameter name="pageurl" value="http://portalqa.wiley.com/sites/news/Pages/GLOBAL-Apr-5-16-Is-oral-health-linked-to-cognitive-ability.aspx"/>
+        <parameter name="webparturl" value="http://portalqa.wiley.com/Pages/wileycol4test.aspx"/>
+        <parameter name="articleurl" value="http://portal.wiley.com/sites/news/Pages/AUSTRALIA-JUNE-28-16-Jo-Hawthorne-celebrates-30-years-at-Wiley.aspx"/>
+        <parameter name="portalsiteurl" value="http://portalqa.wiley.com/sites/functions/portal"/>
+        <parameter name="siteurl" value="http://portalqa.wiley.com/sites/functions/cmt/SitePages/Home.aspx"/>
+        <parameter name="likeurl" value="http://portalqa.wiley.com/sites/news/Pages/HootSuite's-VPs-Share-Their-Insights.aspx"/>
+        <parameter name="trurl" value="http://portalqa.wiley.com/wileytools/SitePages/Home.aspx"/>
+
+        <classes>
+
+            <!--<class name="intialize.Prerequsite"/>-->
+
+            <!-- Login/Logout-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_002_Login_Logout_Page"/>
+
+            <!-- HomePage Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Homepage_Verify_Wiley_Portal"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Homepage_Verify_Global_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Homepage_Verify_Home_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Homepage_Verify_Share_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Homepage_Verify_Follow_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Homepage_Verify_MyFiles_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Homepage_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Homepage_Navigate_Search_Results"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Homepage_Verify_Welcome_Text_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Homepage_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Homepage_Verify_Default_Menu_Under_Welcome_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Homepage_Verify_Newsfeed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Homepage_Verify_Display_Of_Articles"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Homepage_Verify_Copyright_Msg"/>
+
+            <!-- Sub Menu Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Submenu_Verify_Display_Menu_Under_News"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Submenu_Click_Menu_Under_News_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Submenu_Verify_Displayed_Menu_Under_Functions"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Submenu_Click_Menu_Under_Function_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Submenu_Verify_Displayed_Menu_Under_Business"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Submenu_Click_Menu_Under_Business_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Submenu_Verify_Displayed_Menu_Under_Location"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Submenu_Click_Menu_Under_Locations_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Submenu_Verify_Displayed_Menu_Under_Tools"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Submenu_Click_Menu_Under_Tools_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Submenu_Verify_Displayed_Menu_Under_Wiley"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Submenu_Click_Menu_Under_Wiley_Option"/>
+
+            <!-- Project Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Project_Menu_Verification_Under_Creation_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Project_Menu_Verification_Under_Project_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Project_Menu_Verification_Under_Create_New_Project_Page"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_004_005_008_009_Project_Creation_Of_New_Project"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_006_Project_Verification_Of_Warning_Date_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Project_Login_With_New_Project_URL"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_010_011_Project_Edit_Link_Menu"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_012_Project_Drag_And_Drop_Menu"/>-->
+            <!-- Dev Team wants to stop this as it creates top level menu-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_013_Project_Create_New_Link_Menu"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_014_Project_Verification_Of_Widgets"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_Project_Verification_Of_Newsfeed_Section"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_Project_Verification_Of_Page_Section_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Project_Verification_Of_Menu_Under_Page_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Project_Verification_Of_Menu_Under_Files_Option"/>
+
+            <!-- Groups Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Groups_Login_To_Groups_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_007_Submenu_Groups_Verification_Of_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Groups_Accessing_Discussed_Topics_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Groups_Verification_Of_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Groups_Verification_Of_Wiley_Logo"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Groups_Click_Home_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Groups_Verify_Menu_Under_Category"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Groups_Click_AtoZ_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Groups_Click_ZtoA_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Groups_Click_Whats_Hot_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Groups_Verify_Recent_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Groups_Verify_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Groups_Verify_Top_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Groups_Verify_New_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_Groups_Click_About_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_Groups_Click_Site_Contents_And_Verify_Listed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Groups_Verify_Menu_Under_Site_Content"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Group_Follow_Group_And_Start_Conversation"/>
+            <class name="testscripts.Sharepoint.SP_TC_019_Group_Verify_New_Workflow_Menu"/>
+
+            <!-- Search Box Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_SearchBox_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_SearchBox_Verify_Search_Functionality"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_SearchBox_Verify_SearchBox_Presence_AcrossPages"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_SearchBox_Verify_Search_Functionality_Across_AllPages"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_SearchBox_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_SearchBox_Verify_DW_SearchBox"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_SearchBox_Verify_ClickFor_MoreResults"/>
+
+            <!-- Search Result Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_SearchResult_Verify_Phone"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_SearchResult_Verify_RSS_Feed_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_SearchResult_Verify_Alert_Link"/>
+
+            <!-- Username Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_UsernamePage_Verify_User_Dropdown_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_UsernamePage_Click_AboutMe_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_UsernamePage_Verify_Profile_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_UsernamePage_Profile_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_UsernamePage_Verify_Edit_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_UsernamePage_Navigating_Edit_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_UsernamePage_Verify_Edit_Menu_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_UsernamePage_Verify_FlyOver_Menu_Edit_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_UsernamePage_EditUserDetails_Click_SaveAndClose"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_UsernamePage_Verify_SaveAndClose_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_UsernamePage_EditUserDetails_Click_CancelAndGoBack"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_UsernamePage_Verify_Custom_Properties_Settings"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_UsernamePage_Verify_NewsFeed_Settings"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_UsernamePage_Verify_Language_And_Region"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_UsernamePage_Verify_Tags_FollowedBy_User"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_UsernamePage_Org_Chart_Menu"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_017_UsernamePage_See_More_SilverLight_View"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_018_UsernamePage_See_More_HTML_View"/>-->
+
+            <!-- Common-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_WileyFooter_Verify_Wiley_Footer"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_WileyLogo_Verify_Wiley_Portal_Logo"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Copyright_Verify_Copyright_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_SitesFollowed_Verify_User_Following_Sites"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_DocumentsFollowed_Verify_User_Following_Documents"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_Browse_Verify_Browse_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_PageMenu_Verify_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_MySite_Comparison"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Common_New_Page_Check_Option"/>
+
+            <!-- Add Page Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_AddPage_Adding_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_003_004_005_AddPage_Verify_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_AddPage_CheckIn_Checkout_Option"/>
+
+            <!-- My Site Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_002_MySite_Upload_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_MySite_Edit_Link_Menu"/>
+
+            <!-- News Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_News_Click_News_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_News_Verify_Menu_Under_News_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_News_Click_Menu_Under_News_Option"/>
+
+            <!-- Branding Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Branding_Verify_Wiley_Portal"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Branding_Verify_Global_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Branding_Verify_Home_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Branding_Verify_Share_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Branding_Verify_Follow_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Branding_Verify_MyFiles_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Branding_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Branding_Navigate_Search_Results"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Branding_Verify_Welcome_Text_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Branding_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Branding_Verify_Default_Menu_Under_Welcome_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Branding_Verify_Newsfeed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Branding_Verify_Display_Of_Articles"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Branding_Verify_Copyright_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_Branding_Verify_Newsfeed_Page_And_Upload_Photo"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_Branding_Verify_User_Tag_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Branding_Verify_User_Dropdown_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Branding_Click_AboutMe_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_019_Branding_Verify_Profile_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_020_Branding_Verify_Phone_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_021_Branding_Verify_RSS_Feed_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_022_Branding_Click_Alert_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_023_Branding_Verify_Alert_Link"/>
+
+            <!-- Newsfeed Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_NewsFeed_Post_Comments"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_NewsFeed_Use_Of_Tag"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_NewsFeed_Follow_Of_Tag"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_NewsFeed_Post_To_Everyone"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_NewsFeed_Verify_Like_Unlike_Follow"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_NewsFeed_Upload_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_NewsFeed_Post_To_Individual"/>
+
+            <!-- Blog Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Blog_CreateBlog"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Blog_Edit_Categories"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Blog_Create_Post_In_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Blog_Add_Comments_To_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Blog_Manage_Comments_In_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Blog_Verify_Default_Categories"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Blog_Verify_Change_Post_Layout_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Blog_Browse_And_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Blog_Verify_Email_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Blog_Manage_Alert"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Blog_Verify_Edit_Page_Options"/>
+
+
+            <!-- Docs Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_DocsPage_Create_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_DocsPage_Upload_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_DocsPage_Create_New_Folder"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_DocsPage_Edit_Existing_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_006_DocsPage_CheckOut_And_CheckIn_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_DocsPage_View_And_Edit_Properties"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_DocsPage_Verify_Library_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_DocsPage_Verify_Files_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_DocsPage_Create_And_Modify_View"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_DocsPage_Verify_CheckBoxes"/>
+
+            <!-- Libs Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Libs_Verify_Library_Tab_Menu_Options"/>
+
+            <!--Wiki Module -->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Wiki_Create_Wiki_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Wiki_Edit_Existing_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Wiki_Verify_Wiki_Publish"/>
+
+            <!--SPU-287 Module-->
+
+            <class name="testscripts.Sharepoint.SPU_287_TC_004_005_Add_Delete_Category_Under_TAndR"/>
+            <class name="testscripts.Sharepoint.SPU_287_TC_004_005_WileyToolsAndResources_Add_Delete_Category"/>
+            <class name="testscripts.Sharepoint.SPU_287_TC_006_Click_On_TAndRFavs"/>
+
+            <!--SPU-260-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_260_TC_001_Verify_CopyRightMessage_OnMasterPage"/>
+            <class name="testscripts.Sharepoint.SPU_260_TC_002_Verify_CopyRightMsg_AcrossPages"/>
+
+            <!--SPU-255-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_255_TC_001_002_Verify_PostCross_And_Delete_Post"/>
+            <class name="testscripts.Sharepoint.SPU_255_TC_003_Post_Retained_OnClicking_Cancel_Delete"/>
+
+
+            <!--SPU-291-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_291_TC_019_Verify_Like_Button_Functionality"/>
+            <class name="testscripts.Sharepoint.SPU_291_TC_020_Verify_Like_And_Unlike"/>
+            <class name="testscripts.Sharepoint.SPU_291_TC_021_Verify_Like_Button_And_Count"/>
+
+            <!-- SPU-292-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_292_TC_023_024_025_Verify_Promote_Button"/>
+
+            <!--SPU-293-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_293_TC_013_Verify_AbsenceOfMenus_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_014_Verify_AbsenceOfMenus_TAndR_Page"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_015_Verify_AbsenceOfMenus_Business_KandL_Page"/>
+
+            <!--SPU-289-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_289_TC_016_Verify_Tools_In_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_289_TC_017_Verify_TAndR_Data_Match"/>
+            <class name="testscripts.Sharepoint.SPU_289_TC_018_Verify_TAndR_Data_And_WebPart"/>
+
+
+            <!-- SPU-270:  Automating Project Site Expiration-->
+
+            <!--<class name="testscripts.Sharepoint.SPU_270_TC_001_002_Creation_Of_New_Project"/>-->
+            <class name="testscripts.Sharepoint.SPU_270_TC_002A_Verification_Of_Expiry_Date_Msg"/>
+            <class name="testscripts.Sharepoint.SPU_270_TC_003_Login_With_New_Project_URL"/>
+
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_001_002_003_004_Create_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_005_006_007_008_Create_Wiley_Content_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_009_010_011_012_Create_Wiley_Tile_Content_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_013_014_015_016_Create_Wiley_Split_Text_Content_Webpart_And_Verify_Height_Options"/>-->
+
+            <!--Defect Test Case and it's removed from the 205 Test Scripts count-->
+            <!--<class name="testscripts.Sharepoint.SPU_302_TC_001_Verify_Disaster_Recovery_Page"/>-->
+
+            <class name="testscripts.Sharepoint.SPU_311_TC_005_Add_And_Verify_Tags"/>
+
+            <class name="testscripts.Sharepoint.SPU_293_TC_013_AboutWiley_Verify_AbsenceOfMenus_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_014_AboutWiley_Verify_AbsenceOfMenus_ToolsAndResourcesPage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_015_AboutWiley_Verify_AbsenceOfMenus_Business_KandL_Page"/>
+
+
+
+            <class name="testscripts.Sharepoint.SPU_255_TC_003_DeletePostCross_Verify_Post_Retained_OnClicking_Cancel_Delete"/>
+            <class name="testscripts.Sharepoint.SPU_255_TC_001_002_DeletePostCross_Verify_PresenceOf_PostCross_And_Delete_Post"/>
+            <class name="testscripts.Sharepoint.SPU_316_TC_013_014_Verify_Phone_And_Email"/>
+            <class name="testscripts.Sharepoint.SPU_311_TC_008_009_010_Create_Test_Page"/>
+            <class name="testscripts.Sharepoint.SPU_311_TC_007_Unfollow_One_Subsection"/>
+            <!--<class name="testscripts.Sharepoint.SPU_291_TC_022_Verify_Article_With_ZeroLikes"/>-->
+            <class name="testscripts.Sharepoint.SPU_288_TC_007_Add_Category_Under_TAndR_Verify_TandR"/>
+            <class name="testscripts.Sharepoint.SPU_288_TC_008_Edit_List_Under_TAndR"/>
+            <class name="testscripts.Sharepoint.SPU_288_TC_009_Click_On_TAndRFavs_AfterCloud"/>
+            <class name="testscripts.Sharepoint.SPU_286_TC_026_027_028_Verify_User_Able_To_Post"/>
+            <class name="testscripts.Sharepoint.SPU_276_TC_003_Verify_Docs_SearchResults"/>
+            <class name="testscripts.Sharepoint.SPU_276_TC_002_Verify_Doc_SearchResults"/>
+            <class name="testscripts.Sharepoint.SPU_276_TC_001_Verify_PPT_SearchResults"/>
+            <class name="testscripts.Sharepoint.SPU_269_TC_001_Verify_LikeButton_Functionality"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_001_002_Promote_And_RePromote_OtherUsers_Post"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_003_Promote_Own_Post"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_004_005_Promote_And_RePromote_Post_AllWiley"/>
+
+        </classes>
+    </test>
+
+    <test verbose="2" name="MAC">
+        <parameter name="platform" value="MAC"/>
+        <parameter name="browserName" value="safari"/>
+        <parameter name="remoteurl" value="http://10.4.34.30:4446/wd/hub"/>
+        <parameter name="url" value="http://portalqa.wiley.com"/>
+        <parameter name="projecturl" value="http://portalqa.wiley.com/sites/projects5/Test_Bx1/default.aspx"/>
+        <parameter name="newsurl" value="http://portalqa.wiley.com/sites/news/default.aspx"/>
+        <parameter name="pageurl" value="http://portalqa.wiley.com/sites/news/Pages/GLOBAL-Apr-5-16-Is-oral-health-linked-to-cognitive-ability.aspx"/>
+        <parameter name="webparturl" value="http://portalqa.wiley.com/Pages/wileycol4test.aspx"/>
+        <parameter name="articleurl" value="http://portal.wiley.com/sites/news/Pages/AUSTRALIA-JUNE-28-16-Jo-Hawthorne-celebrates-30-years-at-Wiley.aspx"/>
+        <parameter name="portalsiteurl" value="http://portalqa.wiley.com/sites/functions/portal"/>
+        <parameter name="siteurl" value="http://portalqa.wiley.com/sites/functions/cmt/SitePages/Home.aspx"/>
+        <parameter name="likeurl" value="http://portalqa.wiley.com/sites/news/Pages/HootSuite's-VPs-Share-Their-Insights.aspx"/>
+        <parameter name="trurl" value="http://portalqa.wiley.com/wileytools/SitePages/Home.aspx"/>
+
+        <classes>
+
+            <!--<class name="intialize.Prerequsite"/>-->
+
+            <!-- Login/Logout-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_002_Login_Logout_Page"/>
+
+            <!-- HomePage Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Homepage_Verify_Wiley_Portal"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Homepage_Verify_Global_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Homepage_Verify_Home_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Homepage_Verify_Share_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Homepage_Verify_Follow_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Homepage_Verify_MyFiles_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Homepage_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Homepage_Navigate_Search_Results"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Homepage_Verify_Welcome_Text_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Homepage_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Homepage_Verify_Default_Menu_Under_Welcome_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Homepage_Verify_Newsfeed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Homepage_Verify_Display_Of_Articles"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Homepage_Verify_Copyright_Msg"/>
+
+            <!-- Sub Menu Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Submenu_Verify_Display_Menu_Under_News"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Submenu_Click_Menu_Under_News_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Submenu_Verify_Displayed_Menu_Under_Functions"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Submenu_Click_Menu_Under_Function_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Submenu_Verify_Displayed_Menu_Under_Business"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Submenu_Click_Menu_Under_Business_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Submenu_Verify_Displayed_Menu_Under_Location"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Submenu_Click_Menu_Under_Locations_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Submenu_Verify_Displayed_Menu_Under_Tools"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Submenu_Click_Menu_Under_Tools_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Submenu_Verify_Displayed_Menu_Under_Wiley"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Submenu_Click_Menu_Under_Wiley_Option"/>
+
+            <!-- Project Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Project_Menu_Verification_Under_Creation_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Project_Menu_Verification_Under_Project_Page"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_003_Project_Menu_Verification_Under_Create_New_Project_Page"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_004_005_008_009_Project_Creation_Of_New_Project"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_006_Project_Verification_Of_Warning_Date_Msg"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_007_Project_Login_With_New_Project_URL"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_010_011_Project_Edit_Link_Menu"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_012_Project_Drag_And_Drop_Menu"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_013_Project_Create_New_Link_Menu"/>-->
+            <!-- Loading Issue-->
+            <class name="testscripts.Sharepoint.SP_TC_014_Project_Verification_Of_Widgets"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_Project_Verification_Of_Newsfeed_Section"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_Project_Verification_Of_Page_Section_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Project_Verification_Of_Menu_Under_Page_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Project_Verification_Of_Menu_Under_Files_Option"/>
+
+            <!-- Groups Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Groups_Login_To_Groups_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_007_Submenu_Groups_Verification_Of_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Groups_Accessing_Discussed_Topics_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Groups_Verification_Of_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Groups_Verification_Of_Wiley_Logo"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Groups_Click_Home_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Groups_Verify_Menu_Under_Category"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Groups_Click_AtoZ_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Groups_Click_ZtoA_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Groups_Click_Whats_Hot_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Groups_Verify_Recent_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Groups_Verify_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Groups_Verify_Top_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Groups_Verify_New_Members_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_Groups_Click_About_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_Groups_Click_Site_Contents_And_Verify_Listed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Groups_Verify_Menu_Under_Site_Content"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Group_Follow_Group_And_Start_Conversation"/>
+            <class name="testscripts.Sharepoint.SP_TC_019_Group_Verify_New_Workflow_Menu"/>
+
+            <!-- Search Box Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_SearchBox_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_SearchBox_Verify_Search_Functionality"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_SearchBox_Verify_SearchBox_Presence_AcrossPages"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_SearchBox_Verify_Search_Functionality_Across_AllPages"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_SearchBox_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_SearchBox_Verify_DW_SearchBox"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_SearchBox_Verify_ClickFor_MoreResults"/>
+
+            <!-- Search Result Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_SearchResult_Verify_Phone"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_SearchResult_Verify_RSS_Feed_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_SearchResult_Verify_Alert_Link"/>
+
+            <!-- Username Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_UsernamePage_Verify_User_Dropdown_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_UsernamePage_Click_AboutMe_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_UsernamePage_Verify_Profile_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_UsernamePage_Profile_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_UsernamePage_Verify_Edit_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_UsernamePage_Navigating_Edit_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_UsernamePage_Verify_Edit_Menu_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_UsernamePage_Verify_FlyOver_Menu_Edit_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_UsernamePage_EditUserDetails_Click_SaveAndClose"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_UsernamePage_Verify_SaveAndClose_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_UsernamePage_EditUserDetails_Click_CancelAndGoBack"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_UsernamePage_Verify_Custom_Properties_Settings"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_UsernamePage_Verify_NewsFeed_Settings"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_UsernamePage_Verify_Language_And_Region"/>
+            <class name="testscripts.Sharepoint.SP_TC_015_UsernamePage_Verify_Tags_FollowedBy_User"/>
+            <class name="testscripts.Sharepoint.SP_TC_016_UsernamePage_Org_Chart_Menu"/>
+            <!-- Silverlight and HTML View-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_017_UsernamePage_See_More_SilverLight_View"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_018_UsernamePage_See_More_HTML_View"/>-->
+
+            <!-- Common-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_WileyFooter_Verify_Wiley_Footer"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_WileyLogo_Verify_Wiley_Portal_Logo"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Copyright_Verify_Copyright_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_SitesFollowed_Verify_User_Following_Sites"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_DocumentsFollowed_Verify_User_Following_Documents"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_Browse_Verify_Browse_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_PageMenu_Verify_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_001_MySite_Comparison"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Common_New_Page_Check_Option"/>
+
+            <!-- Add Page Module-->
+            <!-- Frames-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_001_AddPage_Adding_Page"/>-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_002_003_004_005_AddPage_Verify_Options"/>-->
+            <!-- Frames-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_006_AddPage_CheckIn_Checkout_Option"/>-->
+
+            <!-- My Site Module-->
+
+            <!--<class name="testscripts.Sharepoint.SP_TC_002_MySite_Upload_Picture"/>-->
+             <!--Click Not Working-->
+            <class name="testscripts.Sharepoint.SP_TC_003_MySite_Edit_Link_Menu"/>
+
+            <!-- News Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_News_Click_News_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_News_Verify_Menu_Under_News_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_News_Click_Menu_Under_News_Option"/>
+
+            <!-- Branding Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Branding_Verify_Wiley_Portal"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Branding_Verify_Global_Header_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Branding_Verify_Home_Page_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Branding_Verify_Share_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Branding_Verify_Follow_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Branding_Verify_MyFiles_Icon_Tooltip"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Branding_Verify_Search_Dropdown_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Branding_Navigate_Search_Results"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Branding_Verify_Welcome_Text_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Branding_Verify_Searchbox_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Branding_Verify_Default_Menu_Under_Welcome_Msg"/>
+            <class name="testscripts.Sharepoint.SP_TC_012_Branding_Verify_Newsfeed_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_013_Branding_Verify_Display_Of_Articles"/>
+            <class name="testscripts.Sharepoint.SP_TC_014_Branding_Verify_Copyright_Msg"/>
+            <!-- Frames-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_015_Branding_Verify_Newsfeed_Page_And_Upload_Photo"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_016_Branding_Verify_User_Tag_Option"/>
+            <class name="testscripts.Sharepoint.SP_TC_017_Branding_Verify_User_Dropdown_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_018_Branding_Click_AboutMe_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_019_Branding_Verify_Profile_Picture"/>
+            <class name="testscripts.Sharepoint.SP_TC_020_Branding_Verify_Phone_Menu"/>
+            <class name="testscripts.Sharepoint.SP_TC_021_Branding_Verify_RSS_Feed_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_022_Branding_Click_Alert_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_023_Branding_Verify_Alert_Link"/>
+
+            <!-- Newsfeed Module-->
+            <!-- Frames-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_001_NewsFeed_Post_Comments"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_002_NewsFeed_Use_Of_Tag"/>
+             <!--Tagging Error-->
+            <class name="testscripts.Sharepoint.SP_TC_003_NewsFeed_Follow_Of_Tag"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_NewsFeed_Post_To_Everyone"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_NewsFeed_Verify_Like_Unlike_Follow"/>
+            <!--<class name="testscripts.Sharepoint.SP_TC_006_NewsFeed_Upload_Picture"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_007_NewsFeed_Post_To_Individual"/>
+
+            <!-- Blog Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Blog_CreateBlog"/>
+            <class name="testscripts.Sharepoint.SP_TC_002_Blog_Edit_Categories"/>
+            <class name="testscripts.Sharepoint.SP_TC_003_Blog_Create_Post_In_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_Blog_Add_Comments_To_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_Blog_Manage_Comments_In_Blog"/>
+            <class name="testscripts.Sharepoint.SP_TC_006_Blog_Verify_Default_Categories"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_Blog_Verify_Change_Post_Layout_Options"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_Blog_Browse_And_Page"/>
+            <class name="testscripts.Sharepoint.SP_TC_009_Blog_Verify_Email_Link"/>
+            <class name="testscripts.Sharepoint.SP_TC_010_Blog_Manage_Alert"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_Blog_Verify_Edit_Page_Options"/>
+
+
+            <!-- Docs Module-->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_DocsPage_Create_Document"/>
+            <!-- Frames-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_002_DocsPage_Upload_Document"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_003_DocsPage_Create_New_Folder"/>
+            <class name="testscripts.Sharepoint.SP_TC_004_DocsPage_Edit_Existing_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_005_006_DocsPage_CheckOut_And_CheckIn_Document"/>
+            <class name="testscripts.Sharepoint.SP_TC_007_DocsPage_View_And_Edit_Properties"/>
+            <class name="testscripts.Sharepoint.SP_TC_008_DocsPage_Verify_Library_Link"/>
+            <!-- Frames-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_009_DocsPage_Verify_Files_Options"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_010_DocsPage_Create_And_Modify_View"/>
+            <class name="testscripts.Sharepoint.SP_TC_011_DocsPage_Verify_CheckBoxes"/>
+
+            <!-- Libs Module-->
+            <!-- Navigating Back Issue-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_001_Libs_Verify_Library_Tab_Menu_Options"/>-->
+
+            <!--Wiki Module -->
+
+            <class name="testscripts.Sharepoint.SP_TC_001_Wiki_Create_Wiki_Page"/>
+            <!-- Frames-->
+            <!--<class name="testscripts.Sharepoint.SP_TC_002_Wiki_Edit_Existing_Page"/>-->
+            <class name="testscripts.Sharepoint.SP_TC_003_Wiki_Verify_Wiki_Publish"/>
+
+            <!--SPU-287 Module-->
+
+            <class name="testscripts.Sharepoint.SPU_287_TC_004_005_Add_Delete_Category_Under_TAndR"/>
+            <class name="testscripts.Sharepoint.SPU_287_TC_004_005_WileyToolsAndResources_Add_Delete_Category"/>
+            <class name="testscripts.Sharepoint.SPU_287_TC_006_Click_On_TAndRFavs"/>
+
+            <!--SPU-260-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_260_TC_001_Verify_CopyRightMessage_OnMasterPage"/>
+            <class name="testscripts.Sharepoint.SPU_260_TC_002_Verify_CopyRightMsg_AcrossPages"/>
+
+            <!--SPU-255-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_255_TC_001_002_Verify_PostCross_And_Delete_Post"/>
+            <class name="testscripts.Sharepoint.SPU_255_TC_003_Post_Retained_OnClicking_Cancel_Delete"/>
+
+
+            <!--SPU-291-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_291_TC_019_Verify_Like_Button_Functionality"/>
+             <!--Like count Issues-->
+            <class name="testscripts.Sharepoint.SPU_291_TC_020_Verify_Like_And_Unlike"/>
+            <class name="testscripts.Sharepoint.SPU_291_TC_021_Verify_Like_Button_And_Count"/>
+
+            <!-- SPU-292-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_292_TC_023_024_025_Verify_Promote_Button"/>
+
+            <!--SPU-293-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_293_TC_013_Verify_AbsenceOfMenus_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_014_Verify_AbsenceOfMenus_TAndR_Page"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_015_Verify_AbsenceOfMenus_Business_KandL_Page"/>
+
+            <!--SPU-289-Module-->
+
+            <class name="testscripts.Sharepoint.SPU_289_TC_016_Verify_Tools_In_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_289_TC_017_Verify_TAndR_Data_Match"/>
+            <class name="testscripts.Sharepoint.SPU_289_TC_018_Verify_TAndR_Data_And_WebPart"/>
+
+
+            <!-- SPU-270:  Automating Project Site Expiration-->
+
+            <!--<class name="testscripts.Sharepoint.SPU_270_TC_001_002_Creation_Of_New_Project"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_270_TC_002A_Verification_Of_Expiry_Date_Msg"/>-->
+            <class name="testscripts.Sharepoint.SPU_270_TC_003_Login_With_New_Project_URL"/>
+
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_001_002_003_004_Create_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_005_006_007_008_Create_Wiley_Content_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_009_010_011_012_Create_Wiley_Tile_Content_Webpart_And_Verify_Height_Options"/>-->
+            <!--<class name="testscripts.Sharepoint.SPU_245_TC_013_014_015_016_Create_Wiley_Split_Text_Content_Webpart_And_Verify_Height_Options"/>-->
+
+            <!--Defect Test Case and it's removed from the 205 Test Scripts count-->
+            <!--<class name="testscripts.Sharepoint.SPU_302_TC_001_Verify_Disaster_Recovery_Page"/>-->
+
+            <!--Failing in MAC alone-->
+            <class name="testscripts.Sharepoint.SPU_311_TC_005_Add_And_Verify_Tags"/>
+
+            <class name="testscripts.Sharepoint.SPU_293_TC_013_AboutWiley_Verify_AbsenceOfMenus_HomePage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_014_AboutWiley_Verify_AbsenceOfMenus_ToolsAndResourcesPage"/>
+            <class name="testscripts.Sharepoint.SPU_293_TC_015_AboutWiley_Verify_AbsenceOfMenus_Business_KandL_Page"/>
+
+            <class name="testscripts.Sharepoint.SPU_255_TC_001_002_DeletePostCross_Verify_PresenceOf_PostCross_And_Delete_Post"/>
+            <class name="testscripts.Sharepoint.SPU_255_TC_003_DeletePostCross_Verify_Post_Retained_OnClicking_Cancel_Delete"/>
+
+            <class name="testscripts.Sharepoint.SPU_316_TC_013_014_Verify_Phone_And_Email"/>
+            <!-- Frames-->
+            <!--<class name="testscripts.Sharepoint.SPU_311_TC_008_009_010_Create_Test_Page"/>-->
+            <class name="testscripts.Sharepoint.SPU_311_TC_007_Unfollow_One_Subsection"/>
+            <!-- Defect Test Case-->
+            <!--<class name="testscripts.Sharepoint.SPU_291_TC_022_Verify_Article_With_ZeroLikes"/>-->
+            <class name="testscripts.Sharepoint.SPU_276_TC_001_Verify_PPT_SearchResults"/>
+            <class name="testscripts.Sharepoint.SPU_276_TC_002_Verify_Doc_SearchResults"/>
+            <class name="testscripts.Sharepoint.SPU_276_TC_003_Verify_Docs_SearchResults"/>
+
+            <class name="testscripts.Sharepoint.SPU_286_TC_026_027_028_Verify_User_Able_To_Post"/>
+
+            <class name="testscripts.Sharepoint.SPU_288_TC_007_Add_Category_Under_TAndR_Verify_TandR"/>
+            <class name="testscripts.Sharepoint.SPU_288_TC_008_Edit_List_Under_TAndR"/>
+            <class name="testscripts.Sharepoint.SPU_288_TC_009_Click_On_TAndRFavs_AfterCloud"/>
+
+            <class name="testscripts.Sharepoint.SPU_269_TC_001_Verify_LikeButton_Functionality"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_001_002_Promote_And_RePromote_OtherUsers_Post"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_003_Promote_Own_Post"/>
+            <class name="testscripts.Sharepoint.SPU_249_TC_004_005_Promote_And_RePromote_Post_AllWiley"/>
+
+            <!-- Total 205 cases-->
+
+        </classes>
+    </test>
+
+</suite>
